@@ -4,16 +4,18 @@ var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 
-//logging multiple values in the console
-console.log (playerName, playerAttack, playerHealth);
-
-//var enemyName
-var enemyName = "Odium";
+//var enemyNames
+var enemyNames = ["Odium", "Sadaes", "Amaram"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
+console.log(enemyNames);
+console.log(enemyNames.length);
+console.log(enemyNames[0]);
+console.log(enemyNames[3]);
+
 // fight function
-var fight = function() {
+var fight = function(enemyName) {
     // Alert players that they are starting the round
     window.alert("Welcome to Robot Gladiators");
 
@@ -73,6 +75,8 @@ var fight = function() {
 };
 
 // run fight function to start game
-fight();
+for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+}
 
  
